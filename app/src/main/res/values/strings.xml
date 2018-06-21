@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MVP_Retrofit</string>
+    <string name="message_head_login">Hi, welcome back my friend</string>
+    <string name="button_login">Sign in with Google</string>
+</resources>
