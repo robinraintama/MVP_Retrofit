@@ -25,4 +25,8 @@ public class MyApplication extends Application {
     public void setAccessToken(String accessToken) {
 
     }
+
+    public void setLogout() {
+
+    }
 }

@@ -10,6 +10,7 @@ public interface LoginContract {
 
     interface Presenter extends BasePresenter {
         void validation();
+        void loginSuccess();
     }
 
     interface Interactor {
