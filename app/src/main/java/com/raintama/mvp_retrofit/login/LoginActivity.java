@@ -1,6 +1,5 @@
 package com.raintama.mvp_retrofit.login;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.raintama.mvp_retrofit.BaseActivity;
@@ -11,9 +10,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.View{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        
+        setContentView(R.layout.login_activity);
     }
 
     @Override

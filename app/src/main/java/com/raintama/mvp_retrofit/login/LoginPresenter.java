@@ -1,5 +1,7 @@
 package com.raintama.mvp_retrofit.login;
 
+import android.view.View;
+
 import com.raintama.mvp_retrofit.BaseActivity;
 import com.raintama.mvp_retrofit.presenter.BasePresenter;
 
@@ -15,7 +17,7 @@ public class LoginPresenter extends BaseActivity implements LoginContract.Presen
     }
 
     @Override
-    public void validation() {
+    public void googleLogin(View view) {
 
     }
 

@@ -1,5 +1,7 @@
 package com.raintama.mvp_retrofit.login;
 
+import android.view.View;
+
 import com.raintama.mvp_retrofit.contract.BaseViewContract;
 import com.raintama.mvp_retrofit.presenter.BasePresenter;
 
@@ -9,7 +11,7 @@ public interface LoginContract {
     }
 
     interface Presenter extends BasePresenter {
-        void validation();
+        void googleLogin(android.view.View view);
         void loginSuccess();
     }
 
