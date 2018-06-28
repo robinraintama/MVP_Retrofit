@@ -13,6 +13,8 @@ import android.widget.TextView;
 import com.raintama.mvp_retrofit.contract.BaseViewContract;
 import com.raintama.mvp_retrofit.login.LoginActivity;
 
+import retrofit2.Call;
+
 public class BaseActivity extends AppCompatActivity implements BaseViewContract{
     ProgressBar progressBar;
 
@@ -21,6 +23,11 @@ public class BaseActivity extends AppCompatActivity implements BaseViewContract{
         super.onCreate(savedInstanceState);
 
         //TODO implement progress bar
+    }
+
+    @Override
+    public void showServerErrorDialog(String message) {
+
     }
 
     @Override
@@ -34,17 +41,17 @@ public class BaseActivity extends AppCompatActivity implements BaseViewContract{
     }
 
     @Override
-    public void showServerErrorDialog() {
-
-    }
-
-    @Override
     public void showProgressDialog() {
 
     }
 
     @Override
     public void dismissProgressDialog() {
+
+    }
+
+    @Override
+    public void retryDialog(Call call) {
 
     }
 

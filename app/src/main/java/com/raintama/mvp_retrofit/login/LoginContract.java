@@ -20,7 +20,6 @@ public interface LoginContract {
         void signInGoogleFailed(GoogleSignInResult result);
         void loginSuccess(User user);
         void goToHome();
-        void showSnackBar(String message);
     }
 
     interface Presenter extends BasePresenter {

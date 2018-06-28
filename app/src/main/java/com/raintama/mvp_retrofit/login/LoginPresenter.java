@@ -7,16 +7,14 @@ import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.raintama.mvp_retrofit.BaseActivity;
 import com.raintama.mvp_retrofit.connection.RetrofitService;
 import com.raintama.mvp_retrofit.connection.User;
-import com.raintama.mvp_retrofit.presenter.BasePresenter;
 
 import java.util.HashMap;
 
 import retrofit2.Call;
 
-public class LoginPresenter extends BaseActivity implements LoginContract.Presenter {
+public class LoginPresenter implements LoginContract.Presenter {
     private LoginContract.View loginView;
     private LoginInteractor loginInteractor;
-    private String validEmail = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" + "\\@" + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" + "(" + "\\." + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" + ")+";
 
     public LoginPresenter(LoginContract.View loginView) {
         this.loginView = loginView;
@@ -57,11 +55,13 @@ public class LoginPresenter extends BaseActivity implements LoginContract.Presen
 
     @Override
     public void callLoginFailed(String message) {
-        loginView.showSnackBar(message);
+        loginView.dismissProgressDialog();
+        loginView.showServerErrorDialog(message);
     }
 
     @Override
     public void onNoConnection(Call call) {
-
+        loginView.dismissProgressDialog();
+        loginView.retryDialog(call);
     }
 }
