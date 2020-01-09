@@ -1,7 +1,7 @@
 package com.raintama.mvp_retrofit;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Utils {
     public static void intentWithClearTask(AppCompatActivity mActivity, Class<?> classDestination){

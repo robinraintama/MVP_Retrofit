@@ -1,6 +1,6 @@
 package com.raintama.mvp_retrofit.login;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.View;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -14,8 +14,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Set;
 
 import retrofit2.Call;
